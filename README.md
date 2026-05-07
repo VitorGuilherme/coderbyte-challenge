@@ -2,6 +2,11 @@
 
 Projeto de automação E2E para [teste-colmeia-qa.colmeia-corp.com](https://teste-colmeia-qa.colmeia-corp.com), cobrindo os principais fluxos da plataforma, **documentação de bugs ativos** e validação de comportamento esperado.
 
+## 📄 Test Plan
+
+Explicação detalhada de toda a cobertura de testes:
+- [View Test Plan](https://drive.google.com/file/d/1bKsANpvSbmqlDCk6JUU2_93K-z9tKdaW/view?usp=sharing)
+  
 ---
 ## 🐞 Bugs Documentados
 
@@ -113,23 +118,6 @@ cy.loginWithBugWorkaround(email, password);
 Quando o BUG-01 for corrigido, basta remover o clique no modal de dentro do comando — todos os testes continuarão funcionando sem alteração.
 
 ---
-
-## 🤖 Integração com LLM — Processo de Geração
-
-Este projeto foi desenvolvido através de um fluxo estruturado de **prompt engineering colaborativo** entre **ChatGPT-4o** (mapeamento exploratório da aplicação e classificação de bugs por severidade) e **Claude Sonnet** (geração de código de produção, arquitetura e documentação técnica).
-
-O processo seguiu estas etapas:
-
-1. **Análise de domínio e bug mapping com GPT-4o:** a partir da lista de bugs fornecida pelo QA Engineer, o GPT categorizou os problemas por severidade e identificou as dependências entre eles (ex: BUG-02 bloqueia a validação da tela de Arquivados).
-
-2. **Definição de estratégia de teste com Claude:** os bugs foram classificados em dois tipos de testes — *documentação de comportamento atual* (testes que passam enquanto o bug existe) vs. *validação de comportamento esperado* (testes que falham enquanto o bug existe, quebrando o CI). Claude optou pela segunda abordagem por ser mais útil como safety net de regressão.
-
-3. **Geração de código e refinamento iterativo:** cada módulo (Page Objects, specs, commands) foi gerado em contexto separado para manter qualidade e coesão, com revisão humana entre as etapas.
-
-4. **Decisão arquitetural sobre o workaround do BUG-01:** Claude sugeriu isolar o workaround em um custom command (`loginWithBugWorkaround`) para que a correção futura do bug impacte apenas um arquivo, mantendo os specs estáveis.
-
----
-
 ## ⚙️ CI/CD — GitHub Actions
 
 O workflow em `.github/workflows/cypress.yml` executa em **push** e **pull_request** para `main` e `develop`.
