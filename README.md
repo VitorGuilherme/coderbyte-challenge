@@ -3,13 +3,6 @@
 Projeto de automação E2E para [teste-colmeia-qa.colmeia-corp.com](https://teste-colmeia-qa.colmeia-corp.com), cobrindo os principais fluxos da plataforma, **documentação de bugs ativos** e validação de comportamento esperado.
 
 ---
-
-## 🎬 Walkthrough
-
-> _Adicione aqui o link do vídeo de demonstração após a gravação._
-
----
-
 ## 🐞 Bugs Documentados
 
 Os testes marcados com `[BUG-XX]` no título **documentam comportamentos incorretos ativos** na plataforma. Esses testes estão escritos para validar o comportamento **esperado** — ou seja, falharão enquanto o bug não for corrigido, servindo como alerta automático para o time de desenvolvimento.
