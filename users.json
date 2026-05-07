@@ -1,0 +1,13 @@
+{
+  "validUser": {
+    "email": "qa@test.com",
+    "password": "123456"
+  },
+  "invalidUser": {
+    "email": "invalid@test.com",
+    "password": "wrongpassword"
+  },
+  "newDatabase": {
+    "name": "QA Test Database"
+  }
+}

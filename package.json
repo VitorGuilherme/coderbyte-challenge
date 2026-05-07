@@ -1,0 +1,16 @@
+{
+  "name": "colmeia-cypress-qa",
+  "version": "1.0.0",
+  "description": "E2E test automation for teste-colmeia-qa.colmeia-corp.com",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:login": "cypress run --headed --spec 'cypress/e2e/login.cy.ts'",
+    "cy:database": "cypress run --headed --spec 'cypress/e2e/database.cy.ts'",
+    "cy:navigation": "cypress run --headed --spec 'cypress/e2e/navigation.cy.ts'"
+  },
+  "devDependencies": {
+    "cypress": "^15.11.0",
+    "typescript": "^5.4.0"
+  }
+}
