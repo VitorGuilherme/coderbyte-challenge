@@ -43,7 +43,7 @@ A estratégia adotada documenta tanto os **happy paths** quanto os **bugs conhec
 
 | Ferramenta | Versão | Justificativa |
 |---|---|---|
-| **Cypress** | ^13 | Framework E2E maduro com excelente DX, runner visual, time-travel debugging e suporte nativo a TypeScript sem configuração extra |
+| **Cypress** | ^15.11.0 | Framework E2E maduro com excelente DX, runner visual, time-travel debugging e suporte nativo a TypeScript sem configuração extra |
 | **TypeScript** | ^5.4 | Tipagem estática nos Page Objects elimina erros de seletor em tempo de desenvolvimento e melhora a manutenção |
 
 ---
